@@ -3,6 +3,7 @@ layout: post
 title:  "First Post!"
 date:   2018-05-07 10:56:56 -0700
 categories: uncategorized
+author: SBYpotato
 ---
 
 # first post on jekyll

@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Second Post!"
+date:   2018-05-07 13:30:49 -0700
+categories: uncategorized
+author: SBYpotato
+---
 # The Third Post
 <p> Hello guys! Welcome to my third post. I'm sure you only got here becuase you clicked by accident. :) </p>
 

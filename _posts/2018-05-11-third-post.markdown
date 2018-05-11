@@ -62,5 +62,11 @@ you know what, this class is <strike>triggered</strike> very happy. I think we h
 - dogs
 - dogs
 - dogs
-
+### method 2
+<ol>
+ 1. idk <br>
+ 2. idk <br>
+ 3. idk <br>
+ </ol>
 <p> nevermind i change my mind i don't want to do this anymore </p>
+<p> don't expose me i just put br tags </br>

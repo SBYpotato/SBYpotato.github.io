@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#center {
+		float: center;
+		width: 300px;
+}
+/* b a c k g r o u n d s */
+/*bake file*/
+body {
+	background-image:url(images/backg/food2.gif);
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}
+#wrapper {
+	background-color: rgba(255,255,255,0.35)
+}
+.baguette {
+	background-image:url(images/backg/bread.gif);
+	}
+.berrycake {
+	background-image:url(images/backg/bread.gif);
+	}
+.bread {
+	background-image:url(images/backg/bread.gif);
+	}	
+.brownie {
+	background-image:url(images/backg/bread.gif);
+	}
+.cake {
+	background-image:url(images/backg/bread.gif);
+	}
+.cheesecake {
+	background-image:url(images/backg/dessertbg2.gif);
+	}
+.cookie_ {
+	background-image: url(images/backg/bread.gif);
+	}
+.cookies_{
+	background-image:url(images/backg/bread.gif);
+	}
+.croissant{
+	background-image:url(images/backg/bread.gif);
+	}
+/*dessert file*/
+.chocolatemousse {
+	background-image:url(images/backg/dessertbg2.gif);
+	}
+.churros{
+	background-image:url(images/backg/dessertbg2.gif);
+	}
+.gelato{
+	background-image:url(images/backg/dessertbg2.gif);
+	}
+.taiyaki{
+	background-image:url(images/backg/dessertbg2.gif);
+	}
+/*drinks file*/
+.coffee {
+	background-image:url(images/backg/drinkbg.jpg);
+	}
+.coke{
+	background-image:url(images/backg/drinkbg.jpg);
+	}
+.drpepper{
+	background-image:url(images/backg/drinkbg.jpg);
+	}
+.jarritos{
+	background-image:url(images/backg/drinkbg.jpg);
+	}
+.tea{
+	background-image:url(images/backg/drinkbg.jpg);
+	}
+/*fast*/
+.fries{
+	background-image:url(images/backg/fastfoodbackground.gif);
+	}
+.hotdog{
+	background-image:url(images/backg/junkfood.gif);
+	}
+.pizza{
+	background-image:url(images/backg/fastfoodbackground.gif);
+	}
+/*fruit*/
+.cherry{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.grape{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.mango{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.pineapple{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+/*junk*/
+.nacho{
+	background-image:url(images/backg/junkfood.gif);
+	}
+.pringles{
+	background-image:url(images/backg/fastfoodbackground.gif);
+	}
+/*meat*/
+.chicken{
+	background-image:url(images/backg/meatbg.jpg);
+	}
+.fish{
+	background-image:url(images/backg/meatbg.jpg);
+	}
+.escargot{
+	background-image:url(images/backg/meatbg.jpg);
+	}
+.lamb{
+	background-image:url(images/backg/meatbg.jpg);
+	}
+.steak{
+	background-image:url(images/backg/meatbg.jpg);
+	}
+/*sweets*/
+.haribo{
+	background-image:url(images/backg/dessertbg.jpg);
+	}
+.kitkat{
+	background-image:url(images/backg/dessertbg.jpg);
+	}
+.milkshake{
+	background-image:url(images/backg/dessertbg.jpg);
+	}
+.skittles{
+	background-image:url(images/backg/dessertbg.jpg);
+	}
+.trolli{
+	background-image:url(images/backg/dessertbg.jpg);
+	}
+/*vegetable*/
+.avocado{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.bellpepper{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.bokchoy{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.broccoli{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.carrot{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.celery{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}
+.zucchini{
+	background-image:url(images/backg/fruitbackground.jpg);
+	}

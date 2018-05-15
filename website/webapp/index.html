@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web App</title>
+<!--Stylesheet-->
+<link rel="stylesheet" type="text/css" href="webapp.css">
+<!--JavaScript-->
+<script type="text/javascript" src="webapp.js"></script>
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<h1 id="gtable"> </h1>
+<table border="1" cellpadding="1" align = "center" bgcolor="#FFFFFF"> 
+<caption>Grandma Information </caption>
+<tbody>
+	<tr> 
+		<td> Grandma Level </td>
+		<td> Grandma Function (Per Four Seconds) </td>
+		<td> Cost </td>
+		<td> Bribe Grandma! </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#F33434"> Normal Grandma: <a id="grandma"> 0 </a> </td>
+		<td> 1 Cookie</td>
+		<td> 10 cookies </td>
+		<td> <button type="button" onClick="getGrandma();">Bribe Normal Grandmas</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Grandma: <a id="grandmaL1"> 0 </a> </td>
+		<td> 1 Cookie, 1 Baguette </td>
+		<td> 15 Baguettes </td>
+		<td> <button type="button" onClick="getGrandmaL1();">Bribe Level 1 Grandma</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFC222"> Lvl 2 Grandma: <a id="grandmaL2"> 0 </a> </td>
+		<td> 2 Cookies, 1 Baguette, 1 Bread </td>
+		<td> 20 Bread </td>
+		<td> <button type="button" onClick="getGrandmaL2();">Bribe Level 2 Grandma</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#C2F521"> Lvl 3 Grandma: <a id="grandmaL3"> 0 </a> </td>
+		<td> 2 Cookies, 2 Baguettes, 1 Bread, 1 Brownie </td>
+		<td> 25 Brownies </td>
+		<td> <button type="button" onClick="getGrandmaL3();"> Bribe Level 3 Grandma</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Grandma: <a id="grandmaL4"> 0 </a></td>
+		<td>3 Cookies, 2 Baguettes, 2 Bread, 1 Brownie, 1 Croissant </td>
+		<td> 30 Croissants </td>
+		<td> <button type="button" onClick="getGrandmaL4();"> Bribe Level 4 Grandma</button> </td>
+	</tr>
+	</tbody>
+</table>
+	
+<div align="center">
+<!--Baked Goods-->
+<h1 id="baked-goods"> Baked Goods</h1><br>
+	<a href="#desserts">Desserts</a><br>
+	<a href="#drinks">Drinks</a>     <br>
+	<a href="#artery-blockage">Artery Blockage</a><br>
+	<a href="#produce">Produce</a><br>
+	<a href="#sweets">Sweets</a><br>
+
+	<!-- C O O K I E -->
+	<button type="button" onClick="cookieClick()"> <img src="images/bake/cookie.png" alt="cookie!" class="cookie_"> </button><br>
+		<p>Clicks:<a id="cookie_"> 0</a></p>
+		<a href="#gtable"> Grandma Table </a>
+	<!-- B A G U E T T E -->
+	<h1 id="baked-goods"></h1><br>
+	<button type="button" onClick="baguetteClick()"> <img src="images/bake/baguette.png" alt="its a piece of bread but fancily named" 
+		class="baguette"> </button><br>
+	<p>Clicks: <a id="baguette">0</a></p>
+	<a href="#gtable"> Grandma Table </a>
+	<!-- B R E A D -->
+	<h1 id="baked-goods"></h1><br>
+		<button type="button" onClick="breadClick()"> <img src="images/bake/bread.png" alt="piece of bread" class="bread"> </button> <br>
+		<p>Clicks: <a id="bread">0</a></p>
+		<a href="#gtable"> Grandma Table </a>
+	<!-- B R O W N I E -->
+	<h1 id="baked-goods"></h1><br>
+		<!--buttons-->
+		<button type="button" onClick="brownieClick()"> <img src="images/bake/brownie.png" alt="brownie" class="brownie"> </button> <br>
+		<!--display values-->
+		<p>Clicks: <a id="brownie">0</a></p>
+		<a href="#gtable"> Grandma Table </a>
+	<!-- C R O I S S A N T -->
+	<h1 id="baked-goods"></h1><br>
+		<!-- buttons -->
+			<button type="button" onClick="croissantClick()"> <img src="images/bake/croissant.png" alt="ahh! you gonna make me drop mah croissant" 
+			class=	"croissant"> </button> <br>
+	<p>Clicks: <a id="croissant">0</a></p>
+	<a href="#gtable"> Grandma Table </a><br><br>
+	</div>
+<!--dessert file-->
+<!-- table -->
+<div align="center">
+<table border="1" cellpadding="1" bgcolor = "FFFFFF">
+<caption> Desserts Pastry Chef Information </caption>
+<tbody>
+	<tr>
+		<td> Baker Level </td>
+		<td> Baker Function (Per Five Seconds) </td>
+		<td> Cost </td>
+		<td> Bribe a Baker! </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F33434"> Normal Baker:<a id="baker"> 0</a></td>
+		<td> 1 Cheesecake </td>
+		<td> 10 Cheesecakes </td>
+		<td> <button type="button" onClick="getBaker()"> Bribe a (mediocre) Baker! </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Baker:<a id="bakerL1"> 0</a> </td>
+		<td> 1 Cheesecake, 1 Taiyaki </td>
+		<td> 15 Taiyaki </td>
+		<td> <button type="button" onClick= "getBakerL1()">Bribe a Lvl 1 Baker!</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFC222"> Lvl 2 Baker: <a id="bakerL2"> 0</a> </td>
+		<td> 2 Cheesecakes, 1 Taiyaki, 1 Gelato </td>
+		<td>20 Gelato  </td>
+		<td> <button type="button" onClick= "getBakerL2()"> Bribe a Lvl2 Baker!</button></td>
+	</tr>
+	<tr>
+		<td bgcolor="#C2F521"> Lvl 3 Baker: <a id="bakerL3">0</a> </td>
+		<td> 2 Cheesecake, 2 Taiyaki, 1 Gelato, 1 Churro</td>
+		<td> 25 Churros </td>
+		<td> <button type="button" onClick="getBakerL3()"> Bribe a Lvl3 Baker!</button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Baker: <a id="bakerL4">0</a></td>
+		<td> 3 Cheesecake, 2 Taiyaki, 2 Gelato, 1 Churro, 1 Mousse </td>
+		<td> 30 Mousse </td>
+		<td> <button type="button" onClick="getBakerL4()"> Bribe a Lvl4 Baker! </button></td>
+	</tr>
+</tbody>
+</table>
+<h1 id="desserts">Desserts</h1><br>
+<a href="#baked-goods">Baked Goods</a><br>
+<a href="#drinks">Drinks</a><br>
+<a href="#artery-blockage">Artery Blockage</a><br>
+<a href="#produce">Produce</a><br>
+<a href="#sweets">Sweets</a><br>
+<!-- cheesecake -->
+		<button type="button" onClick="cheesecakeClick()"> <img src="images/dessert/cheesecake.png" alt="cheesecake" class="cheesecake"></button>
+			<br><p>Clicks: <a id="cheesecake">0</a></p>
+<!--taiyaki -->
+<h1 id="desserts"></h1><br>
+		<button type="button" onClick="taiyakiClick()"> <img src="images/dessert/taiyaki.png" alt="taiyaki!" class="taiyaki"> </button> <br>
+		<p>Clicks: <a id="taiyaki">0</a></p>
+
+<!--gelato-->
+<h1 id="desserts"></h1><br>
+		<button type="button" onClick="gelatoClick()"> <img src="images/dessert/gelato.png" alt="delicious ice cream." class="gelato"></button> <br>
+		<p>Clicks: <a id="gelato">0</a></p><br>
+<!--churros-->
+<h1 id="desserts"></h1><br>
+		<button type="button" onClick="churrosClick()"> <img src="images/dessert/churros.png" alt="yummy bread sticks with cinnamon" class="churros"	></button> <br>
+		<p>Clicks: <a id="churros">0</a></p><br>
+<!--mousse-->		
+<h1 id="desserts"></h1><br>
+	<button type="button" onClick="mousseClick()"> <img src="images/dessert/chocolate-mousse.png" alt="chocolate cake thing" class="chocolatemousse"> </button>
+		<p>Clicks: <a id="mousse">0</a></p>
+
+<!--DRINKS-->
+
+<table border="1" cellpadding="1" bgcolor="FFFFFF">
+<caption> Drinks Dispenser Information </caption>
+<tbody>
+	<tr>
+		<td> Dispenser Level </td>
+		<td> Something Dispenser (Per Five Seconds) </td>
+		<td> Cost </td>
+		<td> Buy a dispenser </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F33434"> Normal Dispenser: <a id="dispenser"> 0 </a></td>
+		<td> 1 Coffee </td>
+		<td> 10 Coffee </td>
+		<td> <button type="button" onClick="getDispenser()"> Buy an average dispenser. </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Dispenser: <a id="dispenserL1"> 0 </a></td>
+		<td> 1 Coffee, 1 Coke </td>
+		<td> 15 Coke </td>
+		<td> <button type="button" onClick="getDispenserL1()"> Buy a slightly better dispenser. </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#FFC222"> Lvl 2 Dispenser: <a id="dispenserL2"> 0 </a></td>
+		<td> 2 Coffee, 1 Coke, 1  Dr Pepper</td>
+		<td> 20 Dr Pepper </td>
+		<td> <button type="button" onClick="getDispenserL2()"> Buy a L2 dispenser. </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#C2F521"> Lvl 3 Dispenser: <a id="dispenserL3"> 0</a></td>
+		<td> 2 Coffee, 2 Coke, 1 Dr Pepper, 1 Jarritos </td>
+		<td> 25 Jarritos </td>
+		<td> <button type="button" onClick="getDispenserL3()"> Buy a pretty good dispenser. </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Dispenser: <a id="dispenserL4"> 0 </a></td>
+		<td> 3 Coffee, 2 Coke, 2 Dr Pepper, 1 Jarritos, 1 Tea </td>
+		<td> 30 Tea </td>
+		<td> <button type="button" onClick="getDispenserL4()"> Buy the best dispenser on the market! </button> </td>
+	</tr>
+</tbody>
+</table>
+<h1 id="drinks">Drinks</h1><br>
+<a href="#baked-goods">Baked Goods</a><br>
+<a href="#desserts">Desserts</a><br>
+<a href="#artery-blockage">Artery Blockage</a><br>
+<a href="#produce">Produce</a><br>
+<a href="#sweets">Sweets</a><br>
+
+<button type="button" onClick="coffeeClick()"> <img src="images/drinks/coffee.png" alt="coffee" class="coffee"> </button><p>Clicks: <a id="coffee">0</a></p>
+
+<h1 id="drinks"></h1><br>
+<button type="button" onClick="cokeClick()"> <img src="images/drinks/coke.png" alt="coca cola, not pepsi" class="coke"> </button><p>Clicks: <a id="coke">0</a></p>
+
+<h1 id="drinks"></h1><br>
+<button type="button" onClick="drpepperClick()"> <img src="images/drinks/drpepper.png" alt="why would they trap a pepper doctor in a bottle?!" class="drpepper"> </button><p>Clicks: <a id="drpepper">0</a></p>
+
+<h1 id="drinks"></h1><br>
+<button type="button" onClick="jarritosClick()"> <img src="images/drinks/jarritos.png" alt="some sort of orange soda" class="jarritos"> </button><p>Clicks: <a id="jarritos">0</a></p>
+
+<h1 id="drinks"></h1><br>
+<button type="button" onClick="teaClick()"> <img src="images/drinks/tea.png" alt="boba is great" class="tea"> </button><p>Clicks: <a id="tea">0</a></p>
+
+<!--artery blockage-->
+
+<table border="1" cellpadding="1" bgcolor="FFFFFF">
+<caption> Artery Blockage Fairy Information </caption>
+<tbody>
+	<tr>
+		<td> Artery Blockage Fairy Level </td>
+		<td> Artery Blockage Fairy Function (Per Five Seconds) </td>
+		<td> Cost </td>
+		<td> Bribe a Fairy </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F33434"> Normal Fairy: <a id="fairy"> 0 </a></td>
+		<td> 1 Fry </td>
+		<td> 10 Fries </td>
+		<td> <button type="button" onClick="getFairy()"> Bribe a lazy fairy. </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Fairy: <a id="fairyL1"> 0 </a></td>
+		<td> 1 Fry, 1 Hotdog </td>
+		<td> 15 Hotdogs </td>
+		<td> <button type="button" onClick="getFairyL1()"> Bribe a slightly better working fairy. </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#FFC222"> Lvl 2 Fairy: <a id="fairyL2"> 0 </a></td>
+		<td> 2 Fries, 1 Hotdog, 1  Pizza</td>
+		<td> 20 Pizzas </td>
+		<td> <button type="button" onClick="getFairyL2()"> Bribe an average hard-working fairy. </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#C2F521"> Lvl 3 Fairy: <a id="fairyL3"> 0</a></td>
+		<td> 2 Fries, 2 Hotdogs, 1 Pizza, 1 Nacho </td>
+		<td> 25 Nachos </td>
+		<td> <button type="button" onClick="getFairyL3()"> Bribe a hard-working fairy. </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Fairy: <a id="fairyL4"> 0 </a></td>
+		<td> 3 Fries, 2 Hotdogs, 2 Pizzas, 1 Nacho, 1 Pringle </td>
+		<td> 30 Pringles </td>
+		<td> <button type="button" onClick="getFairyL4()"> Bribe the best fairy in the country! </button> </td>
+	</tr>
+</tbody>
+</table>
+
+<br><br>
+<h1 id="artery-blockage">Artery Blockage</h1><br>
+<a href="#baked-goods">Baked Goods</a><br>
+<a href="#desserts">Desserts</a><br>
+<a href="#drinks">Drinks</a><br>
+<a href="#produce">Produce</a><br>
+<a href="#sweets">Sweets</a><br>
+
+<button type="button" onClick="friesClick()"> <img src="images/fast/fries.png" alt="potato fries" class="fries"> </button><p>Clicks: <a id="fries">0</a></p>
+
+<h1 id="artery-blockage"></h1><br>
+<button type="button" onClick="hotdogClick()"> <img src="images/fast/hotdog.png" alt="a hotdog with mustard topping" class="hotdog"> </button><p>Clicks: <a id="hotdog">0</a></p>
+
+<h1 id="artery-blockage"></h1><br>
+<button type="button" onClick="pizzaClick()"> <img src="images/fast/pizza.png" alt="a pepperoni pizza pie" class="pizza"> </button><p>Clicks: <a id="pizza">0</a></p>
+
+<h1 id="artery-blockage"></h1><br>
+<button type="button" onClick="nachoClick()"> <img src="images/fast/nacho.png" alt="cheesy chips of glory" class="nacho"> </button><p>Clicks: <a id="nacho">0</a></p>
+
+<h1 id="artery-blockage"></h1><br>
+<button type="button" onClick="pringlesClick()"> <img src="images/fast/pringles.png" alt="super salty chips" class="pringles"> </button><p>Clicks: <a id="pringles">0</a></p>
+
+<!--produce-->
+<!--
+<table border="1" cellpadding="1" bgcolor="FFFFFF">
+<caption> Farmer Information </caption>
+<tbody>
+	<tr>
+		<td> Farmer Level </td>
+		<td> Farmer Function (Per Five Seconds) </td>
+		<td> Cost </td>
+		<td> Bribe a Farmer </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F33434"> Normal Farmer: <a id="farmer"> 0 </a></td>
+		<td> 1 Avocado</td>
+		<td> 10 Avocados</td>
+		<td> <button type="button" onClick="getFarmer()"> bribe a normal farmer!</button></td>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Farmer: <a id="farmerL1"> 0 </a></td>
+		<td> 1 Avocado, 1 Bellpepper</td>
+		<td> 15 Bellpeppers</td>
+		<td> <button type="button" onClick="getFarmerL1()"> bribe a level 1 farmer!</button></td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFC222"> Lvl 2 Farmer: <a id="farmerL2"> 0 </a></td>
+		<td></td>
+		<td> 20 Bokchoy</td>
+		<td> <button type="button" onClick="getFarmerL2()"> bribe a level 2 farmer!</button></td>
+	</tr>
+	<tr>
+		<td bgcolor="#C2F521"> Lvl 3 Farmer: <a id="farmerL3"> 0 </a></td>
+		<td></td>
+		<td> 25 Broccoli</td>
+		<td> <button type="button" onClick="getFarmerL3()">bribe a level 3 farmer!</button></td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Farmer: <a id="farmerL4"> 0 </a></td>
+		<td></td>
+		<td>30 Carrots</td>
+		<td> <button type="button" onClick="getFarmerL4()"> bribe a level 4 farmer!</button></td>
+	</tr>
+	</tr>
+	<tr>
+		<td> Lvl 5 Farmer: <a id="farmerL5"> 0 </a></td>
+		<td> </td>
+		<td> 35 zoo-key-knee</td>
+		<td><button type="button" onClick="getFarmerL5()"> bribe a level 5 farmer! </button> </td>
+	</tr>
+	<tr>
+		<td> Lvl 6 Farmer: <a id="farmerL6"> 0 </a></td>
+		<td> </td>
+		<td> 40 cherries </td>
+		<td> <button type="button" onClick="getFarmerL6()"> bribe a level 6 farmer! </button> </td>
+	</tr>
+</tbody>
+</table>
+
+<br><br>
+<h1 id="produce">Produce</h1><br>
+<a href="#baked-goods">Baked Goods</a><br>
+<a href="#desserts">Desserts</a><br>
+<a href="#drinks">Drinks</a><br>
+<a href="#artery-blockage">Artery Blockage</a><br>
+<a href="#sweets">Sweets</a><br><br><br>
+
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="avocadoClick()"><img src="images/fresh/avocado.png" alt="an avocado cut in half" class="avocado"></button><p>Clicks: <a id="avocado">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="bellpepperClick()"> <img src="images/fresh/bellpepper.png" alt="a weirdly shaped veggie" class="bellpepper"> </button><p>Clicks: <a id="bellpepper">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="bokchoyClick()"> <img src="images/fresh/bokchoy.png" alt="some thing that I have no idea what this is" class="bokchoy"> </button><p>Clicks: <a id="bokchoy">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="broccoliClick()"> <img src="images/fresh/broccoli.png" alt="the veggie that nobody eats" class="broccoli"> </button><p>Clicks: <a id="broccoli">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="carrotClick()"> <img src="images/fresh/carrot.png" alt="an orange cone with leaves hanging from it" class="carrot"> </button><p>Clicks: <a id="carrot">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="zucchiniClick()"> <img src="images/fresh/zucchini.png" alt="a knockoff cucumber" class="zucchini"> </button><p>Clicks: <a id="zucchini">0</a></p>
+
+<button type="button" onClick="cherryClick()"> <img src="images/fresh/cherry.png" alt="two red cherries" class="cherry"> </button><p>Clicks: <a id="cherry">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="grapeClick()"> <img src="images/fresh/grape.png" alt="a cluster of red grapes" class="grape"> </button><p>Clicks: <a id="grape">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="mangoClick()"> <img src="images/fresh/mango.png" alt="ripe mangoes: one whole, one cut in half with one of its halves cut into cubes" class="mango"> </button><p>Clicks: <a id="mango">0</a></p>
+
+<h1 id="produce"></h1><br>
+<button type="button" onClick="pineappleClick()"> <img src="images/fresh/pineapple.png" alt="a pineapple" class="pineapple"> </button><p>Clicks: <a id="pineapple">0</a></p>
+-->
+
+<!--sweets-->
+<!--
+<table border="1" cellpadding="1" bgcolor="FFFFFF">
+<caption> Diabetes Troll Information </caption>
+<tbody>
+	<tr>
+		<td> Troll Level </td>
+		<td> Troll Function (Per Five Seconds) </td>
+		<td> Cost </td>
+		<td> Bribe a Troll </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F33434"> Normal Troll: <a id="troll"> 0 </a></td>
+		<td></td>
+		<td></td>
+		<td> <button type="button" onClick="getTroll()"> </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#F26F22"> Lvl 1 Troll: <a id="trollL1"> 0 </a></td>
+		<td></td>
+		<td></td>
+		<td> <button type="button" onClick="getTrollL1()"> </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#FFC222"> Lvl 2 Troll: <a id="trollL2"> 0 </a></td>
+		<td></td>
+		<td></td>
+		<td> <button type="button" onClick="getTrollL2()"> </button> </td>
+	</tr>
+	<tr> 
+		<td bgcolor="#C2F521"> Lvl 3 Troll: <a id="trollL3"> 0 </a></td>
+		<td></td>
+		<td></td>
+		<td> <button type="button" onClick="getTrollL3()"> </button> </td>
+	</tr>
+	<tr>
+		<td bgcolor="#34FF11"> Lvl 4 Troll: <a id="trollL4"> 0 </a></td>
+		<td></td>
+		<td></td>
+		<td> <button type="button" onClick="getTrollL4()"></button> </td>
+	</tr>
+</tbody>
+</table>
+<br><br>
+<h1 id="sweets">Sweets</h1><br>
+<a href="#baked-goods">Baked Goods</a><br>
+<a href="#desserts">Desserts</a><br>
+<a href="#drinks">Drinks</a><br>
+<a href="#artery-blockage">Artery Blockage</a><br>
+<a href="#produce">Produce</a><br>
+
+<button type="button" onClick="hariboClick()"> <img src="images/sweets/haribo.png" alt="one pack of Haribo Sour Gold-Bears" class="haribo"> </button><p>Clicks: <a id="haribo">0</a></p>
+
+<h1 id="sweets"></h1><br>
+<button type="button" onClick="kitkatClick()"> <img src="images/sweets/kitkat.png" alt="one pack of Easter Break Kit Kats" class="kitkat"> </button><p>Clicks: <a id="kitkat">0</a></p>
+
+<h1 id="sweets"></h1><br>
+<button type="button" onClick="milkshakesClick()"> <img src="images/sweets/milkshakes.png" alt="In-N-Out milkshakes in its three flavors: strawberry, vanilla, and chocolate, respectively" class="milkshake"> </button><p>Clicks: <a id="milkshakes">0</a></p>
+
+<h1 id="sweets"></h1><br>
+<button type="button" onClick="skittlesClick()"> <img src="images/sweets/skittles.png" alt="one pack of original Skittles" class="skittles"> </button><p>Clicks: <a id="skittles">0</a></p>
+
+<h1 id="sweets"></h1><br>
+<button type="button" onClick="trolliClick()"> <img src="images/sweets/trolli.png" alt="one pack of Trolli Peachie O's" class="trolli"> </button><p>Clicks: <a id="trolli">0</a></p>
+<br><br>
+-->
+</div>
+</div>
+</body>
+</html>

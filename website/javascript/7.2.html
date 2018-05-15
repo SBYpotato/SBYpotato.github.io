@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	var weekday = Number(prompt("Which day of the week is it? Enter 1 for Sunday, 2 for Monday, 3 for Tuesday, 4 for Wednesday, 5 for Thursday, 6 for Friday, and 7 for Saturday", "1"));
+	//WHAT
+	
+	switch(weekday) {
+		case 1:
+			alert("We is closed on Sundays, we will refund any money that we have taken from you. Thank you and have a nice day.");
+		break;
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			alert("Business hours Monday thru Friday is 8am-11pm");
+			break;
+		case 7:
+			alert("Buisness hours on Saturday is 24 hours.");
+			break;
+		default:
+			alert("Please try again. Enter 1 for Sunday, 2 for Monday, 3 for Tuesday, 4 for Wednesday, 5 for Thursday, 6 for Friday, and 7 for Saturday");
+			break;	
+	}
+</script>
+</body>
+</html>

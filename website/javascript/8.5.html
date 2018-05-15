@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script text="javascript">
+
+function dice() {
+	var rolls = Math.ceil(Math.random() * 6);
+	document.write("You rolled: " + rolls);	
+	document.write("<br>" + "Reload the page to roll again.");
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" value="roll dice" onClick="dice()">
+</body>
+</html>

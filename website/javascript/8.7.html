@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script text="javascript">
+function isLeapYear() {
+	var y = document.getElementById("year").value;
+	if((y %4 == 0) && (y %100 != 0) || (y %400 == 0)) {
+		alert(y + " is a leap year.");	
+	}
+	else {
+		alert(y + " is not a leap year.");	
+	}
+}
+</script>
+</head>
+
+<body>
+<p> This machine determines if a certain year is a leap year or not. </p>
+<input id="year" type="text"> <input type="button" value="check" onClick="isLeapYear()">
+</body>
+</html>

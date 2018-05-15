@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	while(true) {//true is always true, and will always run
+		var score = eval(prompt("What was your score on the quiz?"));
+		if(score < 0 || score> 100) {
+			alert("Error; the score cannot be less than 0 or greater than 100. Please check again with your teacher.");
+			continue; //Proceed to the top of the loop and repeat, so they can enter -1 again, and again, and again, and again...
+		}
+		
+		if( score>=90 && score <=100)
+			{alert("Congratulations! The teacher will give you candy for doing so well!"); }
+		else if(score < 90 && score >= 76)
+			{alert("Good enough! Maybe try harder next time!"); }
+		else if(score < 76 && score > 50)
+			{alert("Please bring this test to your parents and have both of them sign it at the top of the test. Please return it to the teacher by next week, or else we will assume that you have cheated.");}
+		else
+			{alert("Please bring this test to your parents and have both of them sign it at the top of the test. Please return it to the teacher by next week, or else we will assume that you have cheated. Also, please see the teacher after school to arrange extra lessons. Don't worry, you aren't in trouble or anything!");}
+		var answer = prompt("Do you want to enter a different grade? ONLY answer YES or NO. Make sure to answer in all caps.");
+		if (answer != "YES" ) {
+			break; //ending the loop cause no one wants to relive that	
+		}
+	}
+</script>
+</body>
+</html>

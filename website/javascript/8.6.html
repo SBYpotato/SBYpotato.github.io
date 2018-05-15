@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+function compare() {
+	/*check the answer*/
+	var y = document.getElementById("input").value;
+	try {
+		if(y == " ") throw "empty; try again";
+		else if(y == "  ") throw "empty; try again";
+		else if(Number(y)) throw "Numbers are not an option, silly.";
+		/*computer's answer*/
+var y = document.getElementById("input").value;
+	document.write("You chose: " + y + "<br>");
+	var asdf = Math.floor(Math.random() * 3);
+	if(asdf == 0) {document.write("Opponent chose: Rock");}
+	else if(asdf == 2) {document.write("Opponent chose: Paper");}	
+	else if(asdf == 1){document.write("Opponent chose: Scissors");}
+	/*comparing the answer*/
+	var w = 0;
+	var ow = 0;
+					if(asdf==0 && y=="scissors") {document.write("<br>" + "Sorry, you lost. Try again?"); ow++;}
+					else if(asdf== 0 && y=="rock") {document.write("<br>" + "Tie! Try again?");}
+					else if(asdf== 0 && y=="paper") {document.write("<br>" + "You won! Try again?"); w++;}
+					else if(asdf == 1 && y=="scissors") {document.write("<br>" + "Tie! Try again?");}
+					else if(asdf == 1 && y=="rock") {document.write("<br>" + "You lost! Try again?");ow++;}
+					else if(asdf == 1 && y=="paper") {document.write("<br>" + "You won! Try again?");w++;}
+					else if(asdf== 2 && y=="scissors") {document.write("<br>" + "You won! Try again?");w++;}
+					else if(asdf== 2 && y=="rock") {document.write("<br>" + "You lost! Try again?");ow++;}
+					else if(asdf== 2 && y=="paper"){document.write("<br>" + "Tie! Try again?");}
+	document.write("<br><br>" + "Your wins: " + w);
+	document.write("<br>" + "Your opponent's wins: " + ow);
+	}
+	catch(y) {
+		alert(y);	
+	}
+}
+</script>
+</head>
+
+<body id="potato">
+<p> Rock, paper, scissors. Enter your choice. Write in all lowercases, like so: scissors, rock, paper.</p>
+<input type="text" id="input">
+<input type="button" value="Go go go" onClick="compare()">
+<br>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	var time = prompt("Which hour is it? The hours would be 1-24, and approximate the hour.");
+	if(time>=6 && time <=10) {
+		alert("The resturaunt is not open right now, but you can get a continental breakfast served in the lobby.");
+	}
+	else if(time>=11 && time<=14){
+		alert("The resturaunt is open right now.");
+		var reservation1 = confirm("Would you like to make a reservation?");
+		document.write("Would you like to make a reservation: " + reservation1);
+					if(reservation = true) {
+						alert("You have a reservation at: " + time + ":30");	
+						document.write("<br>" + "Your reservation is at:" + time + ":30");
+		}
+	}
+	else if(time>=17 && time<=21) {
+		alert("The resturaunt is open, and you can order room service or go to the resturaunt.");	
+		var reservation2 = confirm("Would you like to make a reservation?");
+		document.write("Would you like to make a reservation: " + reservation2)
+	}
+	else{
+	alert("Sorry, you'll have to wait, or go out for a snack instead.");
+	}
+</script>
+</body>
+</html>
